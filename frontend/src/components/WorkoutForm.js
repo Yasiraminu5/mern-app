@@ -19,10 +19,11 @@ const WorkoutForm = () => {
           setError('You will be logged in')
           return
         }
+        const API_URL = ProcessingInstruction.env.REACT_APP_URL;
 
         const workout = {title, load, reps}
 
-        const response = await fetch('/api/workouts', {
+        const response = await fetch(`${API_URL}/api/workouts`, {
           method: 'POST',
           body: JSON.stringify(workout),
           headers: {
