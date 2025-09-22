@@ -19,7 +19,7 @@ const WorkoutForm = () => {
           setError('You will be logged in')
           return
         }
-        const API_URL = ProcessingInstruction.env.REACT_APP_URL;
+        const API_URL = process.env.REACT_APP_API_URL;
 
         const workout = {title, load, reps}
 

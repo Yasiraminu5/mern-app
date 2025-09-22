@@ -30,7 +30,7 @@ const Home = () => {
       if (user) {  
        fetchWorkouts()
       }
-    }, [dispatch, user])
+    }, [dispatch, user, API_URL])
 
     return (
        <div className = "home">
