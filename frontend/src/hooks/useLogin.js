@@ -10,7 +10,7 @@ export const useLogin = () => {
         setIsLoading(true)
         setError(null)
 
-        const API_URL = ProcessingInstruction.env.REACT_APP_API_URL;
+        const API_URL = process.env.REACT_APP_API_URL;
 
         const response = await fetch(`${API_URL}/api/user/login`, {
             method: 'POST',
